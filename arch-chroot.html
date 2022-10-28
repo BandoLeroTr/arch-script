@@ -32,10 +32,10 @@ grub-install /dev/sda --target=x86_64-efi --efi-directory=/boot/efi --bootloader
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
-echo passwd pc parolası
-echo useradd -m bandolero
-echo passwd bandolero
-echo visudo
+echo passwd "root kullanıcısı parolası"
+echo useradd -m username "user name kısmına kendi kullanıcı adını yazın"
+echo passwd username "oluşturduğumuz kullanıcının parolası" 
+echo visudo "oluşturduğumuz kullanıcı hesabının yetkilerini root yetkisine yükseltiyoruz"
 echo exit
 echo umount -R /mnt     
-echo poweroff
+echo reboot
