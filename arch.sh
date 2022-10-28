@@ -1,8 +1,11 @@
 #!/bin/bash
 
+# 1 - Kuruluma başlamadan önce cgdisk /dev/sda ile disk bölümleme işlemini yapın. 
+# 2 - chmod +x arch.sh
+# 3 - ./arch.sh
+
 loadkeys trq
 timedatectl set-ntp true
-#cgdisk /dev/sda
 
 mkfs.fat -F 32 /dev/sda1
 mkswap /dev/sda2
