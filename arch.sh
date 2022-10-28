@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1 - Kuruluma başlamadan önce cgdisk /dev/sda ile disk bölümleme işlemini yapın. 
-# 2 - chmod +x arch.sh
+# 2 - chmod +x arch-iso.sh
 # 3 - ./arch.sh
 
 loadkeys trq
