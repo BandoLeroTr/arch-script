@@ -48,7 +48,7 @@ if user_name :
     os.system("useradd -m {}".format((user_name)))
     
 if user_passwd :
-    os.system("passwd {}".format((user_passwd)))
+    os.system("passwd {}".format((user_name)))
 
 echo visudo "oluşturduğumuz kullanıcı hesabının yetkilerini root yetkisine yükseltiyoruz"
 echo exit
