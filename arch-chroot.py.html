@@ -49,8 +49,8 @@ if user_name :
     
 if user_passwd :
     os.system("passwd {}".format((user_name)))
+os.system("echo {} ALL=(ALL:ALL) ALL >> /etc/sudoers" .format((user_name)))
 
-echo visudo "oluşturduğumuz kullanıcı hesabının yetkilerini root yetkisine yükseltiyoruz"
 echo exit
 echo umount -R /mnt     
 echo reboot
