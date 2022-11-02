@@ -23,7 +23,7 @@ os.system("pacman -S xorg-server xorg-apps i3 xfce4-terminal xfce4-clipman-plugi
 
 os.system("pacman -S pulseaudio pavucontrol intel-ucode base-devel git zip unzip udisks2 gvfs-mtp brightnessctl")
 
-os.system("pacman -S picom nitrogen rofi thunar lxappearance vivaldi") #htop
+os.system("pacman -S picom nitrogen rofi thunar lxappearance") #vivaldi htop opera
 
 os.system("systemctl enable NetworkManager")
 os.system("systemctl enable lightdm")
@@ -36,32 +36,6 @@ os.system("grub-install /dev/sda --target=x86_64-efi --efi-directory=/boot/efi -
 os.system("grub-mkconfig -o /boot/grub/grub.cfg")
 
 os.system("clear")
-
-user_name = input("username: ")
-
-if user_name :
-    os.system("useradd -m {}".format((user_name)))
-
-os.system("echo ######## root passwd #######")
-os.system("passwd")
-
-os.system("echo ######## user passwd ########") 
-os.system("passwd {}".format((user_name)))
-    
-os.system("echo {} ALL=(ALL:ALL) ALL >> /etc/sudoers".format((user_name)))
-
-os.system("passwd {}".format((user_name)))
-#######################################################################################
-os.system("su {}".format((user_name)))
-
-os.system("rm -r /home/{}/.config".format((user_name)))
-
-os.system("git clone https://github.com/BandoLeroTr/archlinux.github.io.git")
-os.system("cd archlinux.github.io")
-
-os.system("mv config .config")
-
-os.system("cp -r .config /home/{}/".format((user_name)))
 
 echo umount -R /mnt     
 echo reboot
