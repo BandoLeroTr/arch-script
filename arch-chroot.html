@@ -32,10 +32,26 @@ grub-install /dev/sda --target=x86_64-efi --efi-directory=/boot/efi --bootloader
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
-echo passwd "root kullanıcısı parolası"
-echo useradd -m user name "user name kısmına kendi kullanıcı adını yazın"
-echo passwd username "oluşturduğumuz kullanıcının parolası" 
-echo visudo "oluşturduğumuz kullanıcı hesabının yetkilerini root yetkisine yükseltiyoruz"
+useradd -m bandolero
+
+echo ######## root passwd #######")
+passwd
+
+echo ######## user passwd ########
+passwd bandolero
+
+echo bandolero 'ALL=(ALL:ALL) ALL' >> /etc/sudoers
+
+git clone https://github.com/bandolerotr/arch-script.git
+cd arch-script
+
+cp xorg/00-keyboard.conf /etc/X11/xorg.conf.d/
+cp xorg/20-intel.conf /etc/X11/xorg.conf.d/
+
+#echo passwd "root kullanıcısı parolası"
+#echo useradd -m user name "user name kısmına kendi kullanıcı adını yazın"
+#echo passwd username "oluşturduğumuz kullanıcının parolası" 
+#echo visudo "oluşturduğumuz kullanıcı hesabının yetkilerini root yetkisine yükseltiyoruz"
 echo exit
 echo umount -R /mnt     
 echo reboot
