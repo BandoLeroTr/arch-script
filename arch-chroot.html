@@ -23,13 +23,6 @@ grub-install /dev/sda --target=x86_64-efi --efi-directory=/boot/efi --bootloader
 grub-mkconfig -o /boot/grub/grub.cfg
 
 useradd -m bandolero
-
-echo ######## root passwd #######
-passwd
-
-echo ######## user passwd ########
-passwd bandolero
-
 echo bandolero 'ALL=(ALL:ALL) ALL' >> /etc/sudoers
 
 git clone https://github.com/bandolerotr/arch-script.git
@@ -39,6 +32,12 @@ cp xorg/00-keyboard.conf /etc/X11/xorg.conf.d/
 
 systemctl enable NetworkManager
 systemctl enable lightdm
+
+echo ######## root passwd #######
+passwd
+
+echo ######## user passwd ########
+passwd bandolero
 
 echo exit
 echo umount -R /mnt     
