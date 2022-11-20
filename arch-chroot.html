@@ -10,7 +10,7 @@ echo "127.0.0.1		localhost" >> /etc/hosts
 echo "::1		localhost" >> /etc/hosts
 locale-gen
 
-pacman -S grub efibootmgr networkmanager sudo
+pacman -S grub efibootmgr networkmanager sudo 
 
 pacman -S xorg i3 xfce4-terminal lightdm lightdm-gtk-greeter base-devel git zip unzip brightnessctl nitrogen rofi thunar firefox
 
@@ -23,7 +23,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 useradd -m bandolero
 
-echo ######## root passwd #######")
+echo ######## root passwd #######
 passwd
 
 echo ######## user passwd ########
