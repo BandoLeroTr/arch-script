@@ -48,9 +48,9 @@ mv config .config
 cp -r .config /home/bandolero
 #############################################
 cd themes
-tar xf Tela-circle-manjaro.tar.gz
+tar xf Tela-circle-red.tar.xz
 unzip Qogir-dark.zip
-unzip Pax-GTK.zip
+tar xf Pax-GTK.tar.gz
 
 cp -r Tela-circle-manjaro /usr/share/icons #folder icon
 cp -r Qogir-dark /usr/share/icons #cursor icon
@@ -66,11 +66,11 @@ cp .vimrc ~/.vimrc
 cp xorg/00-keyboard.conf /etc/X11/xorg.conf.d/
 #######################################################################################
 git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd ..
+#cd yay
+#makepkg -si
+#cd ..
 
-yay -S timeshift
+#yay -S timeshift
 
 #######################################################################################
 systemctl enable NetworkManager
