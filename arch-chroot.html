@@ -4,7 +4,6 @@ ln -sf /usr/share/zoneinfo/Europe/Istanbul /etc/localtime
 hwclock --systohc
 
 echo "tr_TR.UTF-8 UTF-8" >> /etc/locale.gen
-echo "tr_TR ISO-8859-9" >> /etc/locale.gen
 
 echo 'LANG="tr_TR.UTF-8"' >> /etc/locale.conf
 
@@ -18,12 +17,7 @@ locale-gen
 
 pacman -S grub efibootmgr networkmanager
 
-pacman -S xorg-server xorg-apps i3 xfce4-terminal xfce4-clipman-plugin lightdm lightdm-gtk-greeter 
-
-pacman -S pulseaudio pavucontrol intel-ucode base-devel git zip unzip udisks2 gvfs-mtp brightnessctl nitrogen rofi thunar vivaldi
-
-systemctl enable NetworkManager
-systemctl enable lightdm
+pacman -S xorg i3 xfce4-terminal lightdm lightdm-gtk-greeter base-devel git zip unzip brightnessctl nitrogen rofi thunar firefox
 
 mkinitcpio -P
 mkdir /boot/efi
@@ -48,10 +42,9 @@ cd arch-script
 cp xorg/00-keyboard.conf /etc/X11/xorg.conf.d/
 cp xorg/20-intel.conf /etc/X11/xorg.conf.d/
 
-#echo passwd "root kullanıcısı parolası"
-#echo useradd -m user name "user name kısmına kendi kullanıcı adını yazın"
-#echo passwd username "oluşturduğumuz kullanıcının parolası" 
-#echo visudo "oluşturduğumuz kullanıcı hesabının yetkilerini root yetkisine yükseltiyoruz"
+systemctl enable NetworkManager
+systemctl enable lightdm
+
 echo exit
 echo umount -R /mnt     
 echo reboot
