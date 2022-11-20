@@ -52,7 +52,7 @@ tar xf Tela-circle-red.tar.xz
 unzip Qogir-dark.zip
 tar xf Pax-GTK.tar.gz
 
-cp -r Tela-circle-manjaro /usr/share/icons #folder icon
+cp -r Tela-circle-red /usr/share/icons #folder icon
 cp -r Qogir-dark /usr/share/icons #cursor icon
 cp -r Pax-GTK /usr/share/themes #all color
 cd ..
@@ -62,6 +62,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 mv vimrc .vimrc
 cp .vimrc ~/.vimrc
+cp .vimrc /home/bandolero
 #######################################################################################
 cp xorg/00-keyboard.conf /etc/X11/xorg.conf.d/
 #######################################################################################
