@@ -61,12 +61,11 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 mv vimrc .vimrc
-cp .vimrc ~/.vimrc
 cp .vimrc /home/bandolero
 #######################################################################################
 cp xorg/00-keyboard.conf /etc/X11/xorg.conf.d/
 #######################################################################################
-git clone https://aur.archlinux.org/yay.git
+#git clone https://aur.archlinux.org/yay.git
 #cd yay
 #makepkg -si
 #cd ..
@@ -79,3 +78,4 @@ systemctl enable lightdm
 
 #echo umount -R /mnt     
 #echo reboot
+exit
