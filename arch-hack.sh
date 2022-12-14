@@ -66,13 +66,14 @@ cp -r .config/rofi/* /usr/share/rofi/themes/
 systemctl enable NetworkManager
 systemctl enable lightdm
 #######################################################################################
-mkdir /home/bandolero/.oh-my-zsh/plugins
-mkdir /home/bandolero/.oh-my-zsh/themes/
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+cp -r /root/.oh-my-zsh /home/bandolero
+
 cp -r bandolero /home/bandolero/.oh-my-zsh/plugins/
 cp robbyrussell.zsh-theme /home/bandolero/.oh-my-zsh/themes/
+
 cp zshrc .zshrc
 cp .zshrc /home/bandolero/
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #######################################################################################
 echo umount -R /mnt     
 echo reboot
