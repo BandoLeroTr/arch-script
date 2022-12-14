@@ -6,8 +6,8 @@ echo tr_TR.UTF-8 UTF-8 >> /etc/locale.gen
 echo LANG="tr_TR.UTF-8" >> /etc/locale.conf
 echo KEYMAP=trq >> /etc/vconsole.conf
 echo archlinux >> /etc/hostname
-echo 127.0.0.1		localhost >> /etc/hosts
-echo ::1		localhost >> /etc/hosts
+echo 127.0.0.1          localhost >> /etc/hosts
+echo ::1                localhost >> /etc/hosts
 locale-gen
 
 echo [multilib] >> /etc/pacman.conf
@@ -17,7 +17,7 @@ pacman -Sy
 
 pacman -S grub efibootmgr networkmanager sudo
 
-pacman -S xorg i3 xfce4-terminal xfce4-taskmanager lightdm lightdm-gtk-greeter base-devel git zip unzip rofi thunar thunar-archive-plugin lxappearance firefox ristretto file-roller awesome-terminal-fonts zsh 
+pacman -S xorg i3 xfce4-terminal xfce4-taskmanager lightdm lightdm-gtk-greeter base-devel git zip unzip rofi thunar thunar-archive-plugin lxappearance firefox ristretto file-roller awesome-terminal-fonts zsh
 
 mkinitcpio -P
 mkdir /boot/efi
@@ -63,18 +63,14 @@ cp xorg/00-keyboard.conf /etc/X11/xorg.conf.d/
 #######################################################################################
 cp -r .config/rofi/* /usr/share/rofi/themes/
 #######################################################################################
-#git clone https://aur.archlinux.org/yay.git
-#cd yay
-#makepkg -si
-#cd ..
-
-#yay -S timeshift
-
-#######################################################################################
 systemctl enable NetworkManager
 systemctl enable lightdm
-
-#echo umount -R /mnt     
-#echo reboot
+#######################################################################################
+cp -r bandolero ~/.oh-my-zsh/plugins/
+cp robbyrussell.zsh-theme ~/.oh-my-zsh/themes/
+cp zshrc ~/.zshrc
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#######################################################################################
+echo umount -R /mnt     
+echo reboot
 exit
