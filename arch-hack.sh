@@ -41,7 +41,7 @@ cd arch-script
 
 mv config .config
 
-cp -r .config /home/bandolero
+cp -r .config /home/bandolero/
 #############################################
 cd themes
 tar xf Tela-circle-red.tar.xz
@@ -56,8 +56,8 @@ cd ..
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-mv vimrc .vimrc
-cp .vimrc /home/bandolero
+cp vimrc .vimrc
+cp .vimrc /home/bandolero/
 #######################################################################################
 cp xorg/00-keyboard.conf /etc/X11/xorg.conf.d/
 #######################################################################################
@@ -66,9 +66,12 @@ cp -r .config/rofi/* /usr/share/rofi/themes/
 systemctl enable NetworkManager
 systemctl enable lightdm
 #######################################################################################
-cp -r bandolero ~/.oh-my-zsh/plugins/
-cp robbyrussell.zsh-theme ~/.oh-my-zsh/themes/
-cp zshrc ~/.zshrc
+mkdir /home/bandolero/.oh-my-zsh/plugins
+mkdir /home/bandolero/.oh-my-zsh/themes/
+cp -r bandolero /home/bandolero/.oh-my-zsh/plugins/
+cp robbyrussell.zsh-theme /home/bandolero/.oh-my-zsh/themes/
+cp zshrc .zshrc
+cp .zshrc /home/bandolero/
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #######################################################################################
 echo umount -R /mnt     
