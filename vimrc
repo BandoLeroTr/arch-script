@@ -16,35 +16,38 @@ Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
-set number                                    "satır numarası"
+set number
 set encoding=UTF-8
-set mouse=a                                   "vim içinde mouse kullanma"
+set mouse=a
 
 nmap <C-t> :colorscheme desert<CR>
 nmap <C-y> :colorscheme elflord<CR>
 
-nmap <F9> :PlugInstall<CR>                    "plugin yükleme"
-nmap <F10> :PlugClean<CR>                     "plugin kaldırma"
+nmap <F9> :PlugInstall<CR>
+nmap <F10> :PlugClean<CR>
+nmap <F11> :PlugUpdate<CR>
 
-nmap <C-b> :NERDTreeToggle<CR>                 "ekranın sol tarafında klasör ve dosyaları görme"
+nmap <C-b> :NERDTreeToggle<CR>
 
-nmap <F3> :set number<CR>                     "satır numaralarını açar"
-nmap <F4> :set nonumber<CR>                   "satır numaralarını kapar"
+nmap <F3> :set number<CR>
+nmap <F4> :set nonumber<CR>
 
-nmap <C-f> :Lines<CR>                         "fzf ile vim içinde sayı ve kelime aratma"
+nmap <C-f> :Lines<CR>
 
-nnoremap <S-Tab> <<                           "kelimeyi bir tab sağa kaydırma"
-inoremap <S-Tab> <C-d>                        "kelimeyi bir tab sola kaydırma"
+nnoremap <S-Tab> <<
+inoremap <S-Tab> <C-d>
 
-nmap <C-e> :tabnew<CR>                        "vim içinde yeni sayfa açma"
-nmap <C-w> :tabclose<CR>                      "açılan sayfayı kapatma"
-nmap <Tab> :tabn<CR>                          "sayfalar arasında tab tuşu ile geçiş yapma. mouse ile de geçiş yapılabiliyor"
+nmap <C-e> :tabnew<CR>
+nmap <C-w> :tabclose<CR>
 nnoremap <S-E> :tabf<CR>
-nmap <C-z> u                                  "geri al"
+nmap <C-z> u
+
 noremap <silent> <C-S>  :update<CR>
 vnoremap <silent> <C-S> <C-C>:update<CR>
 inoremap <silent> <C-S> <C-O>:update<CR>
-nmap <C-q> :q<CR>                             "sayfa daha önceden kaydedilmişse çıkar"
-nmap <ESC> :q!<CR>                            "kaydetmeden çıkar"
 
-inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>" 
+noremap <silent> <C-Q> :q<CR>
+vnoremap <silent> <C-Q> <C-C>:q<CR>
+inoremap <silent> <C-Q> <C-O>:q<CR>
+
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
