@@ -26,9 +26,7 @@ nmap <C-y> :colorscheme elflord<CR>
 nmap <F9> :PlugInstall<CR>                    "plugin yükleme"
 nmap <F10> :PlugClean<CR>                     "plugin kaldırma"
 
-nmap <F5> :NERDTreeToggle<CR>                 "ekranın sol tarafında klasör ve dosyaları görme"
-"let g:NERDTreeDirArrowExpandable = '->'"
-"let g:NERDTreeDirArrowCollapsible = '-'"
+nmap <C-b> :NERDTreeToggle<CR>                 "ekranın sol tarafında klasör ve dosyaları görme"
 
 nmap <F3> :set number<CR>                     "satır numaralarını açar"
 nmap <F4> :set nonumber<CR>                   "satır numaralarını kapar"
