@@ -41,7 +41,9 @@ nmap <C-w> :tabclose<CR>                      "açılan sayfayı kapatma"
 nmap <Tab> :tabn<CR>                          "sayfalar arasında tab tuşu ile geçiş yapma. mouse ile de geçiş yapılabiliyor"
 nnoremap <S-E> :tabf<CR>
 nmap <C-z> u                                  "geri al"
-nmap <C-s> :w<CR>                             "sayfayı kaydeder"
+noremap <silent> <C-S>  :update<CR>
+vnoremap <silent> <C-S> <C-C>:update<CR>
+inoremap <silent> <C-S> <C-O>:update<CR>
 nmap <C-q> :q<CR>                             "sayfa daha önceden kaydedilmişse çıkar"
 nmap <ESC> :q!<CR>                            "kaydetmeden çıkar"
 
