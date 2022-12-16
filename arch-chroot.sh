@@ -7,7 +7,7 @@ echo LANG="tr_TR.UTF-8" >> /etc/locale.conf
 echo KEYMAP=trq >> /etc/vconsole.conf
 echo archlinux >> /etc/hostname
 echo 127.0.0.1		localhost >> /etc/hosts
-echo ::1		localhost >> /etc/hosts
+echo ::1		    localhost >> /etc/hosts
 locale-gen
 
 echo [multilib] >> /etc/pacman.conf
@@ -17,9 +17,11 @@ pacman -Sy
 
 pacman -S grub efibootmgr networkmanager sudo
 
-pacman -S xorg i3 xfce4-terminal xfce4-clipman-plugin xfce4-taskmanager xfce4-screenshooter lightdm lightdm-gtk-greeter pulseaudio pavucontrol base-devel git zip unzip gvfs-mtp brightnessctl picom nitrogen rofi thunar thunar-archive-plugin lxappearance firefox ristretto file-roller alsa-utils awesome-terminal-fonts zsh steam ttf-liberation gst-libav
+pacman -S xorg i3 xfce4-terminal xfce4-clipman-plugin xfce4-taskmanager xfce4-screenshooter lightdm lightdm-gtk-greeter pulseaudio pavucontrol \
+    base-devel git zip unzip gvfs-mtp brightnessctl picom nitrogen rofi thunar thunar-archive-plugin lxappearance firefox ristretto file-roller \
+    alsa-utils awesome-terminal-fonts zsh steam ttf-liberation gst-libav nodejs yarn python-pip virtualbox php
 
-#pacman -S wine lutris
+#pacman -S wine lutris wireshark
 
 mkinitcpio -P
 mkdir /boot/efi
