@@ -3,11 +3,11 @@ alias ss='sudo pacman -Ss'
 alias sy='sudo pacman -Sy'
 alias syu='sudo pacman -Syu'
 
-alias r='sudo pacman -Rns'
+alias rns='sudo pacman -Rns'
 
 alias y='yay -S'
 alias ys='yay -Ss'
-alias yr='yay -Rns'
+alias yns='yay -Rns'
 
 alias g='git clone'
 alias p='python3'
