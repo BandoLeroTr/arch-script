@@ -22,8 +22,8 @@ nmap <F9> :PlugInstall<CR>                    "plugin yükleme"
 nmap <F10> :PlugClean<CR>                     "plugin kaldırma"
 
 nmap <F5> :NERDTreeToggle<CR>                 "ekranın sol tarafında klasör ve dosyaları görme"
-let g:NERDTreeDirArrowExpandable = '->'
-let g:NERDTreeDirArrowCollapsible = '-'
+"let g:NERDTreeDirArrowExpandable = '->'"
+"let g:NERDTreeDirArrowCollapsible = '-'"
 
 nmap <F3> :set number<CR>                     "satır numaralarını açar"
 nmap <F4> :set nonumber<CR>                   "satır numaralarını kapar"
@@ -41,3 +41,5 @@ nnoremap <S-E> :tabf<CR>
 nmap <C-s> :w<CR>                             "sayfayı kaydeder"
 nmap <C-q> :q<CR>                             "sayfa daha önceden kaydedilmişse çıkar"
 nmap <ESC> :q!<CR>                            "kaydetmeden çıkar"
+
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
