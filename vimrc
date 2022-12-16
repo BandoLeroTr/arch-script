@@ -1,13 +1,18 @@
 call plug#begin()
+
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'scrooloose/syntastic'
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"Plug 'neoclide/jsonc.vim'"
+
 Plug 'ryanoasis/vim-devicons'
+
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
-
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -42,4 +47,4 @@ nmap <C-s> :w<CR>                             "sayfayı kaydeder"
 nmap <C-q> :q<CR>                             "sayfa daha önceden kaydedilmişse çıkar"
 nmap <ESC> :q!<CR>                            "kaydetmeden çıkar"
 
-inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>" 
