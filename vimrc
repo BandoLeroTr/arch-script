@@ -4,10 +4,18 @@ Plug 'scrooloose/syntastic'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 "Plug 'neoclide/jsonc.vim'"
+Plug 'ryanoasis/vim-devicons'
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+
+
 
 call plug#end()
 
 set number
+set encoding=UTF-8
+set mouse=a
+
+
 nmap <C-t> :colorscheme desert<CR>
 
 nmap <F9> :PlugInstall<CR>
