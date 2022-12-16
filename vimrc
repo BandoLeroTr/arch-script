@@ -11,35 +11,33 @@ Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lock
 
 call plug#end()
 
-set number
+set number                                    "satır numarası"
 set encoding=UTF-8
-set mouse=a
-
+set mouse=a                                   "vim içinde mouse kullanma"
 
 nmap <C-t> :colorscheme desert<CR>
+nmap <C-y> :colorscheme elflord<CR>
 
-nmap <F9> :PlugInstall<CR>
-nmap <F10> :PlugClean<CR>
+nmap <F9> :PlugInstall<CR>                    "plugin yükleme"
+nmap <F10> :PlugClean<CR>                     "plugin kaldırma"
 
-nmap <F5> :NERDTreeToggle<CR>
+nmap <F5> :NERDTreeToggle<CR>                 "ekranın sol tarafında klasör ve dosyaları görme"
 let g:NERDTreeDirArrowExpandable = '->'
 let g:NERDTreeDirArrowCollapsible = '-'
 
-nmap <F3> :set number<CR>
-nmap <F4> :set nonumber<CR>
+nmap <F3> :set number<CR>                     "satır numaralarını açar"
+nmap <F4> :set nonumber<CR>                   "satır numaralarını kapar"
 
-nmap <C-f> :Lines<CR>
+nmap <C-f> :Lines<CR>                         "fzf ile vim içinde sayı ve kelime aratma"
 
-nmap <C-y> :colorscheme elflord<CR>
+nnoremap <S-Tab> <<                           "kelimeyi bir tab sağa kaydırma"
+inoremap <S-Tab> <C-d>                        "kelimeyi bir tab sola kaydırma"
 
-nnoremap <S-Tab> <<
-inoremap <S-Tab> <C-d>
-
-nmap <C-e> :tabnew<CR>
-nmap <C-w> :tabclose<CR>
-nmap <Tab> :tabn<CR>
+nmap <C-e> :tabnew<CR>                        "vim içinde yeni sayfa açma"
+nmap <C-w> :tabclose<CR>                      "açılan sayfayı kapatma"
+nmap <Tab> :tabn<CR>                          "sayfalar arasında tab tuşu ile geçiş yapma. mouse ile de geçiş yapılabiliyor"
 nnoremap <S-E> :tabf<CR>
 
-nmap <C-s> :w<CR>
-nmap <C-q> :q<CR>
-nmap <ESC> :q!<CR>
+nmap <C-s> :w<CR>                             "sayfayı kaydeder"
+nmap <C-q> :q<CR>                             "sayfa daha önceden kaydedilmişse çıkar"
+nmap <ESC> :q!<CR>                            "kaydetmeden çıkar"
