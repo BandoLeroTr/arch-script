@@ -19,7 +19,9 @@ pacman -S grub efibootmgr networkmanager sudo
 
 pacman -S xorg i3 xfce4-terminal xfce4-clipman-plugin xfce4-taskmanager xfce4-screenshooter lightdm lightdm-gtk-greeter pulseaudio pavucontrol \
     base-devel git zip unzip gvfs-mtp brightnessctl picom nitrogen rofi thunar thunar-archive-plugin lxappearance firefox ristretto file-roller \
-    alsa-utils awesome-terminal-fonts zsh steam ttf-liberation gst-libav nodejs yarn python-pip virtualbox php
+    alsa-utils awesome-terminal-fonts zsh steam ttf-liberation gst-libav nodejs yarn python-pip virtualbox linux-headers php
+
+modprobe vboxdrv
 
 #pacman -S wine lutris wireshark
 
