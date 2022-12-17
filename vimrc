@@ -51,3 +51,4 @@ vnoremap <silent> <C-Q> <C-C>:q<CR>
 inoremap <silent> <C-Q> <C-O>:q<CR>
 
 inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+hi Pmenu        ctermfg=white ctermbg=black gui=NONE guifg=white guibg=black
