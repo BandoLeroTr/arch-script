@@ -52,3 +52,4 @@ inoremap <silent> <C-Q> <C-O>:q<CR>
 
 inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 hi Pmenu        ctermfg=white ctermbg=black gui=NONE guifg=white guibg=black
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
