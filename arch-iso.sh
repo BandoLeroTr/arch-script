@@ -13,6 +13,8 @@ swapon /dev/sda2
 mkfs.ext4 /dev/sda3
 
 mount /dev/sda3 /mnt
+pacman-key --init
+pacman-key --populate archlinux
 
 pacstrap /mnt base linux linux-firmware
 
