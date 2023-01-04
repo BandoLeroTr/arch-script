@@ -64,7 +64,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 #######################################################################################
 cp xorg/00-keyboard.conf /etc/X11/xorg.conf.d/
 #######################################################################################
-cp -r .config/rofi/* /usr/share/rofi/themes/
+cp -r rofi/* /usr/share/rofi/themes/
 #######################################################################################
 systemctl enable NetworkManager
 systemctl enable lightdm
