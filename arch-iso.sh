@@ -13,10 +13,12 @@ swapon /dev/sda2
 mkfs.ext4 /dev/sda3
 
 mount /dev/sda3 /mnt
-pacman-key --init
-pacman-key --populate archlinux
 
-pacstrap /mnt base linux linux-firmware
+#pacman-key --init
+#pacman-key --populate archlinux
+
+pacman -Sy
+pacstrap /mnt base linux-zen linux-firmware
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
