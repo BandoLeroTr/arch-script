@@ -19,11 +19,12 @@ pacman -S grub efibootmgr networkmanager sudo
 
 pacman -S xorg i3 xfce4-terminal xfce4-clipman-plugin xfce4-taskmanager xfce4-screenshooter lightdm lightdm-gtk-greeter pulseaudio pavucontrol \
     base-devel git zip unzip gvfs-mtp brightnessctl picom nitrogen rofi thunar thunar-archive-plugin lxappearance firefox ristretto file-roller \
-    alsa-utils awesome-terminal-fonts zsh steam ttf-liberation nodejs yarn python-pip virtualbox linux-headers php scrot ffmpegthumbnailer
+    alsa-utils awesome-terminal-fonts zsh steam ttf-liberation nodejs yarn python-pip linux-headers php scrot ffmpegthumbnailer \
+    weston
 
-modprobe vboxdrv
+#modprobe vboxdrv
 
-#pacman -S wine lutris wireshark
+#pacman -S wine lutris wireshark virtualbox
 
 mkinitcpio -P
 mkdir /boot/efi
@@ -46,10 +47,6 @@ echo bandolero 'ALL=(ALL:ALL) ALL' >> /etc/sudoers
 #######################################################################################
 git clone https://github.com/BandoLeroTr/arch-script.git
 cd arch-script
-
-mv config .config
-
-cp -r .config /home/bandolero
 #############################################
 cd themes
 tar xf Tela-circle-red.tar.xz
@@ -61,23 +58,13 @@ cp -r Qogir-dark /usr/share/icons #cursor icon
 cp -r Pax-GTK /usr/share/themes #all color
 cd ..
 #############################################
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-mv vimrc .vimrc
-cp .vimrc /home/bandolero
+#Neovim Plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 #######################################################################################
 cp xorg/00-keyboard.conf /etc/X11/xorg.conf.d/
 #######################################################################################
 cp -r .config/rofi/* /usr/share/rofi/themes/
-#######################################################################################
-#git clone https://aur.archlinux.org/yay.git
-#cd yay
-#makepkg -si
-#cd ..
-
-#yay -S timeshift
-
 #######################################################################################
 systemctl enable NetworkManager
 systemctl enable lightdm
