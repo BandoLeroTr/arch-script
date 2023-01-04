@@ -14,7 +14,7 @@ mkfs.ext4 /dev/sda3
 
 mount /dev/sda3 /mnt
 
-pacstrap /mnt base linux linux-firmware vim
+pacstrap /mnt base linux linux-firmware
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
