@@ -18,6 +18,9 @@ mount /dev/sda3 /mnt
 #pacman-key --populate archlinux
 
 pacman -Sy
+
+pacman -S archlinux-keyring 
+
 pacstrap /mnt base linux-zen linux-firmware
 
 genfstab -U /mnt >> /mnt/etc/fstab
