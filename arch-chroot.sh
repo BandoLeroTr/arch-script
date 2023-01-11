@@ -29,7 +29,8 @@ pacman -S xorg i3 xfce4-terminal lightdm lightdm-gtk-greeter pulseaudio pavucont
 mkinitcpio -P
 mkdir /boot
 #mkdir /boot/efi
-mount /dev/sda1 /boot/efi
+mount /dev/sda1 /boot
+#mount /dev/sda1 /boot/efi
 #grub-install /dev/sda --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch
 grub-mkconfig -o /boot/grub/grub.cfg
