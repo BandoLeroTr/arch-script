@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1 - Kuruluma başlamadan önce cfdisk /dev/sda ile disk bölümleme işlemini yapın. 
-# 2 - curl https://bandolerotr.github.io/arch-script/arch-iso.sh -o a.sh
+# 2 - curl https://bandolerotr.github.io/arch-script/arch-iso.sh -o arch-iso.sh
 # 3 - chmod +x arch-iso.sh
 # 4 - ./arch.sh
 
