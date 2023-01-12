@@ -3,7 +3,7 @@
 # 1 - Kuruluma başlamadan önce cfdisk /dev/sda ile disk bölümleme işlemini yapın. 
 # 2 - curl https://bandolerotr.github.io/arch-script/arch-iso.sh -o arch-iso.sh
 # 3 - chmod +x arch-iso.sh
-# 4 - ./arch.sh
+# 4 - ./arch-iso.sh
 
 loadkeys trq
 timedatectl set-ntp true
