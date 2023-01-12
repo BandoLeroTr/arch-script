@@ -13,8 +13,6 @@ mkswap /dev/sda6
 mkfs.ext4 /dev/sda7
 
 mount /dev/sda7 /mnt
-mkdir /mnt/boot/efi
-mount /dev/sda5 /mnt/boot/efi
 swapon /dev/sda6
 
 #pacman-key --init
@@ -27,6 +25,9 @@ pacman -S archlinux-keyring git
 pacstrap /mnt base linux-zen linux-firmware neovim 
 
 genfstab -U /mnt >> /mnt/etc/fstab
+
+mkdir /mnt/boot/efi
+mount /dev/sda5 /mnt/boot/efi
 
 git clone https://github.com/BandoLeroTr/arch-script.git
 cp -r arch-script /mnt
