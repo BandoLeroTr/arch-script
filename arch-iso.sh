@@ -31,4 +31,7 @@ pacstrap /mnt archlinux-keyring base linux-zen linux-firmware neovim \
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
+git clone https://github.com/BandoLeroTr/arch-script.git
+cp -r arch-script /mnt
+
 arch-chroot /mnt
