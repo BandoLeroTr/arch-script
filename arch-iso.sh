@@ -22,9 +22,7 @@ mount /dev/sda1 /mnt/boot/efi
 
 pacman -Sy
 
-pacman -S archlinux-keyring 
-
-pacstrap /mnt base linux-zen linux-firmware
+pacstrap /mnt archlinux-keyring base linux-zen linux-firmware neovim
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
