@@ -22,7 +22,12 @@ mount /dev/sda1 /mnt/boot/efi
 
 pacman -Sy
 
-pacstrap /mnt archlinux-keyring base linux-zen linux-firmware neovim
+pacstrap /mnt archlinux-keyring base linux-zen linux-firmware neovim \
+    grub efibootmgr networkmanager sudo \
+    xorg i3 xfce4-terminal lightdm lightdm-gtk-greeter pulseaudio pavucontrol \
+    base-devel git zip unzip gvfs-mtp brightnessctl picom nitrogen rofi thunar thunar-archive-plugin lxappearance firefox ristretto file-roller \
+    alsa-utils awesome-terminal-fonts zsh steam ttf-liberation nodejs yarn python-pip scrot ffmpegthumbnailer xfce4-clipman-plugin xfce4-taskmanager \
+    xfce4-screenshooter weston gnu-free-fonts ttf-hack-nerd ntfs-3g os-prober
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
