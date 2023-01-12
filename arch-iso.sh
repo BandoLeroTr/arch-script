@@ -14,7 +14,7 @@ swapon /dev/sda2
 mkfs.ext4 /dev/sda6
 
 mount /dev/sda3 /mnt
-mkdir /boot/efi
+mkdir /mnt/boot/efi
 mount /dev/sda1 /mnt/boot/efi
 
 #pacman-key --init
