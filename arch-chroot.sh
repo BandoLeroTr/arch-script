@@ -13,11 +13,11 @@ locale-gen
 echo [multilib] >> /etc/pacman.conf
 echo Include = /etc/pacman.d/mirrorlist >> /etc/pacman.conf
 
-pacman -Sy
+#pacman -Sy
 
-pacman -S grub efibootmgr networkmanager sudo
+#pacman -S grub efibootmgr networkmanager sudo
 
-pacman -S xorg i3 xfce4-terminal lightdm lightdm-gtk-greeter pulseaudio pavucontrol \
+#pacman -S xorg i3 xfce4-terminal lightdm lightdm-gtk-greeter pulseaudio pavucontrol \
     base-devel git zip unzip gvfs-mtp brightnessctl picom nitrogen rofi thunar thunar-archive-plugin lxappearance firefox ristretto file-roller \
     alsa-utils awesome-terminal-fonts zsh steam ttf-liberation nodejs yarn python-pip scrot ffmpegthumbnailer xfce4-clipman-plugin xfce4-taskmanager 
     xfce4-screenshooter weston gnu-free-fonts ttf-hack-nerd    
@@ -27,7 +27,7 @@ pacman -S xorg i3 xfce4-terminal lightdm lightdm-gtk-greeter pulseaudio pavucont
 #pacman -S wine lutris wireshark virtualbox linux-headers php
 
 mkinitcpio -P
-mkdir /boot/efi
+#mkdir /boot/efi
 #mount /dev/sda1 /boot/efi
 grub-install /dev/sda --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch
 grub-mkconfig -o /boot/grub/grub.cfg
