@@ -8,12 +8,11 @@
 loadkeys trq
 timedatectl set-ntp true
 
-#mkfs.fat -F 32 /dev/sda5
-mkswap /dev/sda6
-swapon /dev/sda6
-mkfs.ext4 /dev/sda7
+mkswap /dev/sda5
+swapon /dev/sda5
+mkfs.ext4 /dev/sda6
 
-mount /dev/sda7 /mnt
+mount /dev/sda6 /mnt
 
 #pacman-key --init
 #pacman-key --populate archlinux
