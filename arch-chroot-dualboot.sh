@@ -17,14 +17,40 @@ pacman -Sy
 
 pacman -S grub efibootmgr networkmanager sudo
 pacman -S os-prober ntfs-3g
-pacman -S xorg i3 xfce4-terminal lightdm lightdm-gtk-greeter pulseaudio pavucontrol \
-    base-devel git zip unzip gvfs-mtp brightnessctl picom nitrogen rofi thunar thunar-archive-plugin lxappearance firefox ristretto file-roller \
-    alsa-utils awesome-terminal-fonts zsh steam ttf-liberation nodejs yarn python-pip scrot ffmpegthumbnailer xfce4-clipman-plugin xfce4-taskmanager \
-    xfce4-screenshooter weston gnu-free-fonts ttf-hack-nerd 
+pacman -S xorg i3 lightdm lightdm-gtk-greeter pulseaudio pavucontrol rofi \
+    xfce4-terminal xfce4-clipman-plugin xfce4-screenshooter xfce4-taskmanager \
+    thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman ffmpegthumbnailer \
+    steam \
+    neovim xed \
+    mpv ristretto gimp obs-studio \
+    firefox \
+    base-devel git zip unzip gvfs-mtp brightnessctl picom nitrogen lxappearance file-roller \
+    alsa-utils zsh nodejs yarn python-pip scrot weston \
+    awesome-terminal-fonts ttf-liberation gnu-free-fonts ttf-hack-nerd \
+    ntfs-3g
+#anbox-modules-dkms-git r46.ae26ba2-1
+#android-cmake-git r147.556cc14-1
+#android-ndk r25.c-1
+#android-platform 33_r02-1
+#android-sdk 26.1.1-2
+#android-sdk-build-tools r33.0.2-1
+#android-sdk-cmdline-tools-latest 9.0-1
+#android-sdk-platform-tools 33.0.3-1
+#android-studio 2022.1.1.21-1
+#autotiling 1.8-1
+#flutter 3.7.6-1
+#google-chrome 111.0.5563.64-1
+#libgbinder 1.1.32-1
+#libglibutil 1.0.68-1
+#python-gbinder 1.1.1-2
+#python-repath 0.9.0-1
+#vscodium-bin 1.75.1.23040-1
+#waydroid 1.4.1-1
+#yay 11.3.2-1
 
 #modprobe vboxdrv
 
-#pacman -S wine lutris wireshark virtualbox linux-headers php
+#pacman -S wine lutris wireshark virtualbox linux-headers php telegram-desktop
 
 echo GRUB_DISABLE_OS_PROBER=false >> /etc/default/grub
 
