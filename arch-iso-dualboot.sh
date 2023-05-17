@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # 1 - Kuruluma başlamadan önce cfdisk /dev/sda ile disk bölümleme işlemini yapın. 
-# 2 - curl https://bandolerotr.github.io/arch-script/arch-iso.sh -o arch-iso.sh
-# 3 - chmod +x arch-iso.sh
-# 4 - ./arch-iso.sh
+# 2 - curl https://bandolerotr.github.io/arch-script/arch-iso-dualboot.sh -o a.sh
+# 3 - chmod +x a.sh
+# 4 - ./a.sh
 
 loadkeys trq
 timedatectl set-ntp true
