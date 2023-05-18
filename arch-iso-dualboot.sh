@@ -8,25 +8,27 @@
 loadkeys trq
 timedatectl set-ntp true
 
-mkswap /dev/sda5
-swapon /dev/sda5
-mkfs.ext4 /dev/sda6
+mkswap /dev/sda6
+swapon /dev/sda6
+mkfs.ext4 /dev/sda7
 
 mount /dev/sda6 /mnt
 
-#pacman-key --init
-#pacman-key --populate archlinux
+rm -r /etc/pacman.d/gnupg
+pkill gpg-agent
+pacman-key --init
+pacman-key --populate archlinux
 
 pacman -Sy
 
 pacman -S archlinux-keyring git
 
-pacstrap /mnt base linux-zen linux-firmware neovim 
+pacstrap /mnt base linux-zen linux-firmware 
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
 mkdir /mnt/boot/efi
-mount /dev/sda2 /mnt/boot/efi
+mount /dev/sda1 /mnt/boot/efi
 
 git clone https://github.com/BandoLeroTr/arch-script.git
 cp -r arch-script /mnt
