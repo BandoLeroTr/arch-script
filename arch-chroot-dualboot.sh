@@ -56,7 +56,7 @@ echo GRUB_DISABLE_OS_PROBER=false >> /etc/default/grub
 
 mkinitcpio -P
 grub-install /dev/sda --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch
-grub-mkconfig -o /boot/grub/grub.cfg
+LC_ALL=C /bin/bash -c "grub-mkconfig -o /boot/grub/grub.cfg"
 
 #clear
 
