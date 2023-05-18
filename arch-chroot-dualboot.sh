@@ -74,13 +74,15 @@ git clone https://github.com/BandoLeroTr/arch-script.git
 cd arch-script
 ############################################
 cd themes
-tar xf Tela-circle-red.tar.xz
-unzip Qogir-dark.zip
-tar xf Pax-GTK.tar.gz
 
-cp -r Tela-circle-red /usr/share/icons #folder icon
+tar xf candy-icons.tar.xz
+unzip Qogir-dark.zip
+tar xf Breeze-Noir-Dark-GTK.tar.gz
+
+cp -r candy-icons /usr/share/icons #folder icon
 cp -r Qogir-dark /usr/share/icons #cursor icon
-cp -r Pax-GTK /usr/share/themes #all color
+cp -r Breeze-Noir-Dark-GTK /usr/share/themes #all color
+
 cd ..
 #######################################################################################
 cp xorg/00-keyboard.conf /etc/X11/xorg.conf.d/
