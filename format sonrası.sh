@@ -18,6 +18,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 cd arch-script
 cp zshrc ~/.zshrc
 cp -r bandolero ~/.oh-my-zsh/plugins
+cp bandolero.zsh-theme ~/.oh-my-zsh/themes
 #######################################################################################
 mkdir ~/.config/nvim
 rm ~/.config
