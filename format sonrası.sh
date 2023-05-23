@@ -17,6 +17,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cd arch-script
 cp zshrc ~/.zshrc
+cp -r bandolero ~/.oh-my-zsh/plugins
 #######################################################################################
 mkdir ~/.config/nvim
 rm ~/.config
