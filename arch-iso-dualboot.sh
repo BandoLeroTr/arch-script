@@ -12,7 +12,7 @@ mkswap /dev/sda6
 swapon /dev/sda6
 mkfs.ext4 /dev/sda7
 
-mount /dev/sda6 /mnt
+mount /dev/sda7 /mnt
 
 rm -r /etc/pacman.d/gnupg
 pkill gpg-agent
@@ -28,8 +28,8 @@ pacstrap /mnt base linux-zen linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 
 mkdir /mnt/boot/efi
-mount /dev/sda1 /mnt/boot/efi
-
+#mount /dev/sda1 /mnt/boot/efi # win 10
+mount /dev/sda2 /mnt/boot/efi # win 8.1
 git clone https://github.com/BandoLeroTr/arch-script.git
 cp -r arch-script /mnt
 
