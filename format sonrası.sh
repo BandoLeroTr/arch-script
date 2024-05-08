@@ -29,5 +29,7 @@ cd yay
 makepkg -si
 cd ..
 
-#yay -S timeshift
+yay -S timeshift
 yay -S autotiling
+#######################################################################################
+sudo pacman -S firefox rofi thunar xfce4-terminal feh lxapperance picom zsh
