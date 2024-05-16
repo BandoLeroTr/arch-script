@@ -1,0 +1,31 @@
+configuration {
+    font:            "Noto Sans Regular 10";
+    show-icons:      false;
+    icon-theme:      "Qogir";
+    scroll-method:   0;
+    disable-history: false;
+    sidebar-mode:    false;
+}
+
+window {
+    background-color: @background;
+    border:           0;
+    padding:          10;
+    transparency:     "real";
+    width:            120px;
+    location:         east;
+    /*y-offset:       18;*/
+    /*x-offset:       850;*/
+}
+
+clock {
+    format: "%H:%M:%S";
+    font: "Noto Sans Regular 10";
+    foreground-color: @foreground;
+    background-color: @background;
+    timezone: "UTC";
+    padding: 5;
+    location: east;
+    x-offset: 850;
+}
+
