@@ -1,0 +1,10 @@
+configuration {
+    modi: "custom_mod";
+}
+
+@theme "default";
+
+@font "mono 12";
+
+@prompt { }
+
